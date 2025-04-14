@@ -1,9 +1,8 @@
 
 const express = require("express");
-const { appLogs } = require("../controller/appLogController");
-// const { appLogs } = require("../controller/appLogController");
+const { fileUpload } = require("../controller/fileUploader.controller");
 const router = express.Router();
 
-router.route("/logs").get(appLogs);
+router.route("/file-upload").post(fileUpload);
 
 module.exports = router
